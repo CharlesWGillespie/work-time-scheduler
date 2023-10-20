@@ -2,8 +2,9 @@ setInterval(function(){let date = dayjs();
     $('#date').text(date.format('MM/d/YYYY'))
     
     let currentTime = dayjs();
-    $('#time').text(currentTime.format('hh: mm: ss: a'))
+    $('#currentDay').text(currentTime.format('MM MMMM, YYYY,   h:mm a '))
     }, 1000);
+    
     
     var myModal = document.getElementById('myModal')
     var myInput = document.getElementById('myInput')
@@ -11,6 +12,8 @@ setInterval(function(){let date = dayjs();
     myModal.addEventListener('shown.bs.modal', function () {
       myInput.focus()
     })
+    
+
 
     // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
