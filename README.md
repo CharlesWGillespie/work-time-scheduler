@@ -10,6 +10,8 @@ To use this application, the user must first click any open timeslot and input w
 
 ## Deplaoyed Webpage
 
+https://charleswgillespie.github.io/work-time-scheduler/
+
 ## Credits
  
  Faran Navazi - Tutor
