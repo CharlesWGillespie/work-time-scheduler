@@ -5,6 +5,7 @@ $(function () {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
+  
   $('.saveBtn').on('click', function(){
     let time = $(this).parent().attr('id');
     let textVal = $(this).siblings('.description').val().trim();
@@ -16,25 +17,33 @@ $(function () {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
-  $('.hour').each(function() {
-    let currentHour = dayjs().hour()
-    let blockHour = $(this).find('.hour').attr('id');
+  
+  $('.time-block').each(function() {
+    let currentHour = dayjs().hour();
+    let blockHour = parseInt($(this).attr('id').split('-')[1]);
+
     if (currentHour === blockHour) {
-      $(this).addClass('.present');
-    } else if ((currentHour < blockHour) && (currentHour > blockHour - 6)) {
-      $(this).addClass('.future');
-    } else if ((currentHour > blockHour) && (currentHour > blockHour + 6)) {
-      $(this).addClass('.past');
+      $(this).removeClass('past future').addClass('present');
+    } else if (currentHour < blockHour) {
+      $(this).removeClass('past present').addClass('future');
+    } else {
+      $(this).removeClass('present future').addClass('past');
     }
   });
 
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
+  
+  $('.time-block').each(function() {
+    let time = $(this).attr('id');
+    let textVal = localStorage.getItem(time);
+    $(this).find('.description').val(textVal);
+  });
 
   // TODO: Add code to display the current date in the header of the page.
-  $('#currentDay').text(dayjs().format('MM/D/YYYY'));
-});
-    
 
-console.log(currentHour)
+  $('#currentDay').text(dayjs().format('MM/D/YYYY'));
+
+
+});
