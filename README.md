@@ -8,7 +8,7 @@ The purpose of this project is to have a place where I can have my work day plan
 
 To use this application, the user must first click any open timeslot and input what they want to be remembered. ex. Lunch with boss at 12pm. Then the user must click the blue save icon on the right side of the page to save the value. The user can refresh and will still see that the time slot and input value are still there thanks to localStorage. 
 
-## Deplaoyed Webpage
+## Deployed Webpage
 
 https://charleswgillespie.github.io/work-time-scheduler/
 
