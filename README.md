@@ -8,13 +8,16 @@ The purpose of this project is to have a place where I can have my work day plan
 
 To use this application, the user must first click any open timeslot and input what they want to be remembered. ex. Lunch with boss at 12pm. Then the user must click the blue save icon on the right side of the page to save the value. The user can refresh and will still see that the time slot and input value are still there thanks to localStorage. 
 
+## Deplaoyed Webpage
+
 ## Credits
+ 
  Faran Navazi - Tutor
  dayjs - https://day.js.org/docs/en/display/format
-
  W3 schools -  https://www.w3schools.com/jquery/default.asp
 
 ## Preview Screenshots
+![Screenshot 2023-10-23 113832](https://github.com/CharlesWGillespie/work-time-scheduler/assets/143773137/40a4822c-df8f-46c4-813b-782e683ab219)
 
 ## Features
 
